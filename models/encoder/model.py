@@ -88,14 +88,7 @@ class SpeakerEncoder(nn.Module):
         mask_matrix = 1 - np.eye(speakers_per_batch, dtype=np.int64)
         for j in range(speakers_per_batch):
             mask = np.where(mask_matrix[j])[0]
-
-            np.save('mask.npy', mask)
-
-            mask = torch.Tensor(mask).long().to(self.loss_device)
-
-            torch.save(mask, 'mask.pt')
-            torch.save(embeds, 'embeds.pt')
-
+            
             sim_matrix[mask, :, j] = (embeds[mask] * centroids_incl[j]).sum(dim=2)
             sim_matrix[j, :, j] = (embeds[j] * centroids_excl[j]).sum(dim=1)
         

@@ -9,7 +9,7 @@ mask_tensor = torch.load('mask.pt')
 embeds = torch.load('embeds.pt')
 embeds = embeds.cuda()
 
-embeds[mask_tensor]
+embeds[mask_array]
 
 
 
