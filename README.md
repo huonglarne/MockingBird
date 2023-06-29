@@ -1,10 +1,24 @@
 
+Download data
 
-  cp control/cli/encoder_preprocess.py .
+    cd /nas/common_data
+
+    wget https://www.openslr.org/resources/62/aidatatang_200zh.tgz
+
+    tar xvz -f /datasets/download/aidatatang_200zh.tgz --exclude 'aidatatang_200zh/corpus/dev/*' --exclude 'aidatatang_200zh/corpus/test/*'
+
+    cd aidatatang_200zh/corpus/train/
+
+    cat *.tar.gz | tar zxvf - -i
+
+    rm -f *.tar.gz
+
+Preprocess data
 
   python encoder_preprocess.py /nas/common_data -d aidatatang_200zh
 
-  rm encoder_preprocess.py
+
+Train
 
   python encoder_train.py train_encoder /nas/common_data/SV2TTS/encoder -m checkpoints/encoder
 
