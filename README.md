@@ -1,3 +1,13 @@
+
+
+  cp control/cli/encoder_preprocess.py .
+
+  python encoder_preprocess.py /nas/common_data -d aidatatang_200zh
+
+  rm encoder_preprocess.py
+
+  python encoder_train.py train_encoder /nas/common_data/SV2TTS/encoder -m checkpoints/encoder
+
 ![mockingbird](https://user-images.githubusercontent.com/12797292/131216767-6eb251d6-14fc-4951-8324-2722f0cd4c63.jpg)
 
 
@@ -113,7 +123,7 @@ You can either train your models or use existing ones:
 * Preprocess with the audios and the mel spectrograms:
 `python encoder_preprocess.py <datasets_root>` Allowing parameter `--dataset {dataset}` to support the datasets you want to preprocess. Only the train set of these datasets will be used. Possible names: librispeech_other, voxceleb1, voxceleb2. Use comma to sperate multiple datasets.
 
-* Train the encoder: `python encoder_train.py my_run <datasets_root>/SV2TTS/encoder`
+* Train the encoder: `python encoder_train.py my_run /nas/common_data/SV2TTS/encoder`
 > For training, the encoder uses visdom. You can disable it with `--no_visdom`, but it's nice to have. Run "visdom" in a separate CLI/process to start your visdom server.
 
 #### 2.2 Train synthesizer with your dataset

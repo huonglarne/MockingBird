@@ -34,7 +34,7 @@ if __name__ == "__main__":
     parser.add_argument("-f", "--force_restart", action="store_true", help= \
         "Do not load any saved model.")
     parser.add_argument("--visdom_server", type=str, default="http://localhost")
-    parser.add_argument("--no_visdom", action="store_true", help= \
+    parser.add_argument("--no_visdom", action="store_true", default=True, help= \
         "Disable visdom.")
     args = parser.parse_args()
     
