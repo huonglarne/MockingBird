@@ -1,4 +1,13 @@
 
+Set up 
+
+  conda env create -n mocking -f env.yml
+
+  conda activate mocking
+
+  pip install -r requirements.txt
+
+
 Download data
 
     cd /nas/common_data
