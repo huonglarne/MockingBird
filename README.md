@@ -1,11 +1,11 @@
 
 Set up 
 
-  conda env create -n mocking -f env.yml
+    conda env create -n mocking -f env.yml
 
-  conda activate mocking
+    conda activate mocking
 
-  pip install -r requirements.txt
+    pip install -r requirements.txt
 
 
 Download data
@@ -24,12 +24,16 @@ Download data
 
 Preprocess data
 
-  python encoder_preprocess.py /nas/common_data -d aidatatang_200zh
+    python encoder_preprocess.py /nas/common_data -d aidatatang_200zh
+
+    python pre.py /nas/common_data -d aidatatang_200zh
 
 
 Train
 
-  python encoder_train.py train_encoder /nas/common_data/SV2TTS/encoder -m checkpoints/encoder
+    MOREH_DUMP_EXEC_GRAPH=1 python encoder_train.py train_encoder /nas/common_data/SV2TTS/encoder -m checkpoints/encoder
+
+    python synthesizer_train.py mandarin /nas/common_data/SV2TTS/synthesizer -m checkpoints/synthesizer
 
 ![mockingbird](https://user-images.githubusercontent.com/12797292/131216767-6eb251d6-14fc-4951-8324-2722f0cd4c63.jpg)
 
