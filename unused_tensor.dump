@@ -1,0 +1,24 @@
+
+Unused tensor count:
+[Tensor_58:1	Tensor_56:1	Tensor_54:1	Tensor_52:1	Tensor_50:1	Tensor_48:1	Tensor_47:1	Tensor_45:1	Tensor_43:1	Tensor_39:1	Tensor_37:1	
+Tensor_36:1	Tensor_13:1	Tensor_12:1	Tensor_11:1	Tensor_10:1	Tensor_9:1	Tensor_8:1	Tensor_7:1	Tensor_6:1	Tensor_35:1	Tensor_5:1	
+Tensor_34:1	Tensor_4:1	Tensor_33:1	Tensor_3:1	Tensor_32:1	Tensor_2:1	Tensor_31:1	Tensor_1:1	Tensor_30:1	Tensor_14:1	Tensor_15:1	
+Tensor_16:1	Tensor_18:1	Tensor_20:1	Tensor_22:1	Tensor_24:1	Tensor_26:1	Tensor_27:1	Tensor_29:1	]
+
+Unused tensor count:
+[Tensor_58:2	Tensor_56:2	Tensor_54:2	Tensor_52:2	Tensor_50:2	Tensor_48:2	Tensor_47:2	Tensor_45:2	Tensor_43:2	Tensor_39:2	Tensor_37:2	
+Tensor_36:2	Tensor_13:2	Tensor_12:2	Tensor_11:2	Tensor_10:2	Tensor_9:2	Tensor_8:2	Tensor_7:2	Tensor_6:2	Tensor_35:2	Tensor_5:2	
+Tensor_34:2	Tensor_4:2	Tensor_33:2	Tensor_3:2	Tensor_32:2	Tensor_2:2	Tensor_31:2	Tensor_1:2	Tensor_30:2	Tensor_14:2	Tensor_15:2	
+Tensor_22:2	Tensor_24:2	Tensor_26:2	Tensor_27:2	Tensor_29:2	]
+
+Unused tensor count:
+[Tensor_58:1	Tensor_56:1	Tensor_54:1	Tensor_52:1	Tensor_50:1	Tensor_48:1	Tensor_47:1	Tensor_45:1	Tensor_43:1	Tensor_39:1	Tensor_37:1	
+Tensor_36:1	Tensor_13:1	Tensor_12:1	Tensor_11:1	Tensor_10:1	Tensor_9:1	Tensor_8:1	Tensor_7:1	Tensor_6:1	Tensor_35:1	Tensor_5:1	
+Tensor_34:1	Tensor_4:1	Tensor_33:1	Tensor_3:1	Tensor_32:1	Tensor_2:1	Tensor_31:1	Tensor_1:1	Tensor_30:1	Tensor_14:1	Tensor_15:1	
+Tensor_16:1	Tensor_18:1	Tensor_20:1	Tensor_22:1	Tensor_24:1	Tensor_26:1	Tensor_27:1	Tensor_29:1	]
+
+Unused tensor count:
+[Tensor_58:2	Tensor_56:2	Tensor_54:2	Tensor_52:2	Tensor_50:2	Tensor_48:2	Tensor_47:2	Tensor_45:2	Tensor_43:2	Tensor_39:2	Tensor_37:2	
+Tensor_36:2	Tensor_13:2	Tensor_12:2	Tensor_11:2	Tensor_10:2	Tensor_9:2	Tensor_8:2	Tensor_7:2	Tensor_6:2	Tensor_35:2	Tensor_5:2	
+Tensor_34:2	Tensor_4:2	Tensor_33:2	Tensor_3:2	Tensor_32:2	Tensor_2:2	Tensor_31:2	Tensor_1:2	Tensor_30:2	Tensor_14:2	Tensor_15:2	
+Tensor_22:2	Tensor_24:2	Tensor_26:2	Tensor_27:2	Tensor_29:2	]

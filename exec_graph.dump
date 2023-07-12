@@ -1,0 +1,374 @@
+== Translation ==
+Source graph:
+Tensor_1: shape = [1024, 40], stride = [40, 1], offset = 0, size = 40960, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_2: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_3: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_4: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_5: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_6: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_7: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_8: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_9: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_10: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_11: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_12: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_13: shape = [256, 256], stride = [256, 1], offset = 0, size = 65536, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_14: shape = [256], stride = [1], offset = 0, size = 256, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_15: shape = [640, 160, 40], stride = [6400, 40, 1], offset = 0, size = 4096000, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_16: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_17: operator = ElemwiseUnaryForward, inputs = [Tensor_16], outputs = [Tensor_18], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_UNARY_FILL scal1_float: 0]
+Tensor_18: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_19: operator = ReshapeForward, inputs = [Tensor_18], outputs = [Tensor_20], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 3 shape: 640 shape: 256 stride: 256 stride: 768 stride: 1]
+Tensor_20: shape = [3, 640, 256], stride = [256, 768, 1], offset = 0, size = 491520, datatype = float32, contiguous? = false, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_21: operator = ReshapeForward, inputs = [Tensor_20], outputs = [Tensor_22], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 3 shape: 256 stride: 768 stride: 256 stride: 1]
+Tensor_22: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_23: operator = ReshapeForward, inputs = [Tensor_20], outputs = [Tensor_24], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 3 shape: 256 stride: 768 stride: 256 stride: 1]
+Tensor_24: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_25: operator = GenerateRandomState, inputs = [], outputs = [Tensor_26, Tensor_27], # backwardable inputs = 0, state = executable, attr<ExplicitSync> = ()
+  - Operand: [seed: 3361192005]
+Tensor_26: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_27: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_28: operator = RNNForward, inputs = [Tensor_15, Tensor_22, Tensor_24, nullptr, Tensor_1, Tensor_5, Tensor_9, Tensor_2, Tensor_6, Tensor_10, Tensor_3, Tensor_7, Tensor_11, Tensor_4, Tensor_8, Tensor_12, Tensor_26, Tensor_27], outputs = [Tensor_29, Tensor_30, Tensor_31, Tensor_32, Tensor_33, Tensor_34, nullptr, Tensor_35, Tensor_36, Tensor_37], # backwardable inputs = 18, state = executable, attr<ExplicitSync> = ()
+  - Operand: [has_biases: true num_layers: 3 train: true mode: MODE_LSTM nonlinearity: TANH]
+Tensor_29: shape = [640, 160, 256], stride = [40960, 256, 1], offset = 0, size = 26214400, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_30: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_31: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_32: shape = [640, 160, 2, 256], stride = [81920, 512, 256, 1], offset = 0, size = 52428800, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_33: shape = [640, 160, 3, 256], stride = [122880, 768, 256, 1], offset = 0, size = 78643200, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_34: shape = [640, 160, 3, 1024], stride = [491520, 3072, 1024, 1], offset = 0, size = 314572800, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_35: shape = [640, 3440640], stride = [3440640, 1], offset = 0, size = 2202009600, datatype = boolean, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_36: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_37: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_38: operator = ReshapeForward, inputs = [Tensor_30], outputs = [Tensor_39], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 3 shape: 640 shape: 256 stride: 256 stride: 768 stride: 1]
+Tensor_39: shape = [3, 640, 256], stride = [256, 768, 1], offset = 0, size = 491520, datatype = float32, contiguous? = false, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_42: operator = ReshapeForward, inputs = [Tensor_39], outputs = [Tensor_43], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 256 stride: 768 stride: 1 offset: 512]
+Tensor_43: shape = [640, 256], stride = [768, 1], offset = 512, size = 491520, datatype = float32, contiguous? = false, complete? = false, dense? = false, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_44: operator = LinearForward, inputs = [Tensor_43, Tensor_13, Tensor_14], outputs = [Tensor_45], # backwardable inputs = 3, state = executable, attr<ExplicitSync> = ()
+  - Operand: []
+Tensor_45: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_46: operator = ReluForward, inputs = [Tensor_45], outputs = [Tensor_47, Tensor_48], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: []
+Tensor_47: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_48: shape = [640, 32], stride = [32, 1], offset = 0, size = 20480, datatype = uint8, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_49: operator = NormForward, inputs = [Tensor_47], outputs = [Tensor_50], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [mode: NUMBER_NORM dims: 1 keepdim: true p: 2]
+Tensor_50: shape = [640, 1], stride = [1, 1], offset = 0, size = 640, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_51: operator = ElemwiseUnaryForward, inputs = [Tensor_50], outputs = [Tensor_52], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_UNARY_ADD scal1_float: 1e-05]
+Tensor_52: shape = [640, 1], stride = [1, 1], offset = 0, size = 640, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_53: operator = ReshapeForward, inputs = [Tensor_52], outputs = [Tensor_54], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 256 stride: 1 stride: 0]
+Tensor_54: shape = [640, 256], stride = [1, 0], offset = 0, size = 640, datatype = float32, contiguous? = false, complete? = false, dense? = false, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_55: operator = ElemwiseBinaryForward, inputs = [Tensor_47, Tensor_54], outputs = [Tensor_56], # backwardable inputs = 2, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_BINARY_DIV]
+Tensor_56: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_57: operator = ReshapeForward, inputs = [Tensor_56], outputs = [Tensor_58], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 64 shape: 10 shape: 256 stride: 2560 stride: 256 stride: 1]
+Tensor_58: shape = [64, 10, 256], stride = [2560, 256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+
+Target (result) graph:
+Tensor_296: shape = [1024, 40], stride = [40, 1], offset = 0, size = 40960, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (296: 163840 Ban)
+Tensor_297: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (297: 1048576 Ban)
+Tensor_298: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (298: 4096 Ban)
+Tensor_299: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (299: 4096 Ban)
+Tensor_300: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (300: 1048576 Ban)
+Tensor_301: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (301: 1048576 Ban)
+Tensor_302: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (302: 4096 Ban)
+Tensor_303: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (303: 4096 Ban)
+Tensor_304: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (304: 1048576 Ban)
+Tensor_305: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (305: 1048576 Ban)
+Tensor_306: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (306: 4096 Ban)
+Tensor_307: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (307: 4096 Ban)
+Tensor_308: shape = [256, 256], stride = [256, 1], offset = 0, size = 65536, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (308: 262144 Ban)
+Tensor_309: shape = [256], stride = [1], offset = 0, size = 256, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (309: 1024 Ban)
+Tensor_310: shape = [640, 160, 40], stride = [6400, 40, 1], offset = 0, size = 4096000, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (310: 8192000 Ban)
+Tensor_311: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (313: 983040 Ban)
+Operation_17: operator = ElemwiseUnaryForward, inputs = [Tensor_311], outputs = [Tensor_313], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_UNARY_FILL scal1_float: 0]
+Tensor_313: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (313: 983040 Bnn)
+Operation_25: operator = GenerateRandomState, inputs = [], outputs = [Tensor_315, Tensor_316], # backwardable inputs = 0, state = executable, attr<ExplicitSync> = ()
+  - Operand: [seed: 3361192005]
+Tensor_315: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (324: 2949120 Ban)
+Tensor_316: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (325: 2949120 Ban)
+Operation_28: operator = RNNForward, inputs = [Tensor_310, Tensor_313, Tensor_313, nullptr, Tensor_296, Tensor_300, Tensor_304, Tensor_297, Tensor_301, Tensor_305, Tensor_298, Tensor_302, Tensor_306, Tensor_299, Tensor_303, Tensor_307, Tensor_315, Tensor_316], outputs = [Tensor_318, Tensor_319, Tensor_320, Tensor_321, Tensor_322, Tensor_323, nullptr, nullptr, Tensor_324, Tensor_325], # backwardable inputs = 18, state = executable, attr<ExplicitSync> = ()
+  - Operand: [has_biases: true num_layers: 3 train: true mode: MODE_LSTM nonlinearity: TANH]
+Tensor_318: shape = [640, 160, 256], stride = [40960, 256, 1], offset = 0, size = 26214400, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (318: 52428800 Ban)
+Tensor_319: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (327: 983040 Ban)
+Tensor_320: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (320: 983040 Ban)
+Tensor_321: shape = [640, 160, 2, 256], stride = [81920, 512, 256, 1], offset = 0, size = 52428800, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (321: 104857600 Ban)
+Tensor_322: shape = [640, 160, 3, 256], stride = [122880, 768, 256, 1], offset = 0, size = 78643200, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (322: 157286400 Ban)
+Tensor_323: shape = [640, 160, 3, 1024], stride = [491520, 3072, 1024, 1], offset = 0, size = 314572800, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (323: 629145600 Ban)
+Tensor_324: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (324: 2949120 Bnn)
+Tensor_325: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (325: 2949120 Bnn)
+Operation_42: operator = ReshapeForward, inputs = [Tensor_319], outputs = [Tensor_327], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 256 stride: 768 stride: 1 offset: 512]
+Tensor_327: shape = [640, 256], stride = [768, 1], offset = 512, size = 491520, datatype = float32, contiguous? = false, complete? = false, dense? = false, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (327: 983040 Bnn)
+Operation_44: operator = LinearForward, inputs = [Tensor_327, Tensor_308, Tensor_309], outputs = [Tensor_329], # backwardable inputs = 3, state = executable, attr<ExplicitSync> = ()
+  - Operand: []
+Tensor_329: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (329: 327680 Ban)
+Operation_46: operator = ReluForward, inputs = [Tensor_329], outputs = [Tensor_331, Tensor_332], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: []
+Tensor_331: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (331: 327680 Ban)
+Tensor_332: shape = [640, 32], stride = [32, 1], offset = 0, size = 20480, datatype = uint8, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (332: 10240 Ban)
+Operation_49: operator = NormForward, inputs = [Tensor_331], outputs = [Tensor_334], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [mode: NUMBER_NORM dims: 1 keepdim: true p: 2]
+Tensor_334: shape = [640, 1], stride = [1, 1], offset = 0, size = 640, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (334: 1280 Ban)
+Operation_51: operator = ElemwiseUnaryForward, inputs = [Tensor_334], outputs = [Tensor_336], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_UNARY_ADD scal1_float: 1e-05]
+Tensor_336: shape = [640, 1], stride = [1, 1], offset = 0, size = 640, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (338: 1280 Ban)
+Operation_53: operator = ReshapeForward, inputs = [Tensor_336], outputs = [Tensor_338], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 256 stride: 1 stride: 0]
+Tensor_338: shape = [640, 256], stride = [1, 0], offset = 0, size = 640, datatype = float32, contiguous? = false, complete? = false, dense? = false, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (338: 1280 Bnn)
+Operation_55: operator = ElemwiseBinaryForward, inputs = [Tensor_331, Tensor_338], outputs = [Tensor_340], # backwardable inputs = 2, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_BINARY_DIV]
+Tensor_340: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (342: 327680 Ban)
+Operation_57: operator = ReshapeForward, inputs = [Tensor_340], outputs = [Tensor_342], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 64 shape: 10 shape: 256 stride: 2560 stride: 256 stride: 1]
+Tensor_342: shape = [64, 10, 256], stride = [2560, 256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (342: 327680 Bnn)
+
+Move-in tensors (source -> target):
+Tensor_1 -> Tensor_296
+Tensor_2 -> Tensor_297
+Tensor_3 -> Tensor_298
+Tensor_4 -> Tensor_299
+Tensor_5 -> Tensor_300
+Tensor_6 -> Tensor_301
+Tensor_7 -> Tensor_302
+Tensor_8 -> Tensor_303
+Tensor_9 -> Tensor_304
+Tensor_10 -> Tensor_305
+Tensor_11 -> Tensor_306
+Tensor_12 -> Tensor_307
+Tensor_13 -> Tensor_308
+Tensor_14 -> Tensor_309
+Tensor_15 -> Tensor_310
+Tensor_16 -> Tensor_311
+
+Move-out tensors (source <- target):
+Tensor_1 <- Tensor_296
+Tensor_2 <- Tensor_297
+Tensor_3 <- Tensor_298
+Tensor_4 <- Tensor_299
+Tensor_5 <- Tensor_300
+Tensor_6 <- Tensor_301
+Tensor_7 <- Tensor_302
+Tensor_8 <- Tensor_303
+Tensor_9 <- Tensor_304
+Tensor_10 <- Tensor_305
+Tensor_11 <- Tensor_306
+Tensor_12 <- Tensor_307
+Tensor_13 <- Tensor_308
+Tensor_14 <- Tensor_309
+Tensor_15 <- Tensor_310
+Tensor_22 <- Tensor_313
+Tensor_24 <- Tensor_313
+Tensor_29 <- Tensor_318
+Tensor_30 <- Tensor_319
+Tensor_31 <- Tensor_320
+Tensor_32 <- Tensor_321
+Tensor_33 <- Tensor_322
+Tensor_34 <- Tensor_323
+Tensor_36 <- Tensor_324
+Tensor_37 <- Tensor_325
+Tensor_43 <- Tensor_327
+Tensor_45 <- Tensor_329
+Tensor_47 <- Tensor_331
+Tensor_48 <- Tensor_332
+Tensor_50 <- Tensor_334
+Tensor_54 <- Tensor_338
+Tensor_56 <- Tensor_340
+Tensor_58 <- Tensor_342
+
+== Translation ==
+Source graph:
+Tensor_1: shape = [1024, 40], stride = [40, 1], offset = 0, size = 40960, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_2: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_3: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_4: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_5: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_6: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_7: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_8: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_9: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_10: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_11: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_12: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_13: shape = [256, 256], stride = [256, 1], offset = 0, size = 65536, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_14: shape = [256], stride = [1], offset = 0, size = 256, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_15: shape = [640, 160, 40], stride = [6400, 40, 1], offset = 0, size = 4096000, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_16: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_17: operator = ElemwiseUnaryForward, inputs = [Tensor_16], outputs = [Tensor_18], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_UNARY_FILL scal1_float: 0]
+Tensor_18: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_19: operator = ReshapeForward, inputs = [Tensor_18], outputs = [Tensor_20], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 3 shape: 640 shape: 256 stride: 256 stride: 768 stride: 1]
+Tensor_20: shape = [3, 640, 256], stride = [256, 768, 1], offset = 0, size = 491520, datatype = float32, contiguous? = false, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_21: operator = ReshapeForward, inputs = [Tensor_20], outputs = [Tensor_22], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 3 shape: 256 stride: 768 stride: 256 stride: 1]
+Tensor_22: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_23: operator = ReshapeForward, inputs = [Tensor_20], outputs = [Tensor_24], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 3 shape: 256 stride: 768 stride: 256 stride: 1]
+Tensor_24: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_25: operator = GenerateRandomState, inputs = [], outputs = [Tensor_26, Tensor_27], # backwardable inputs = 0, state = executable, attr<ExplicitSync> = ()
+  - Operand: [seed: 1877048108]
+Tensor_26: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_27: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_28: operator = RNNForward, inputs = [Tensor_15, Tensor_22, Tensor_24, nullptr, Tensor_1, Tensor_5, Tensor_9, Tensor_2, Tensor_6, Tensor_10, Tensor_3, Tensor_7, Tensor_11, Tensor_4, Tensor_8, Tensor_12, Tensor_26, Tensor_27], outputs = [Tensor_29, Tensor_30, Tensor_31, Tensor_32, Tensor_33, Tensor_34, nullptr, Tensor_35, Tensor_36, Tensor_37], # backwardable inputs = 18, state = executable, attr<ExplicitSync> = ()
+  - Operand: [has_biases: true num_layers: 3 train: true mode: MODE_LSTM nonlinearity: TANH]
+Tensor_29: shape = [640, 160, 256], stride = [40960, 256, 1], offset = 0, size = 26214400, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_30: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_31: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_32: shape = [640, 160, 2, 256], stride = [81920, 512, 256, 1], offset = 0, size = 52428800, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_33: shape = [640, 160, 3, 256], stride = [122880, 768, 256, 1], offset = 0, size = 78643200, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_34: shape = [640, 160, 3, 1024], stride = [491520, 3072, 1024, 1], offset = 0, size = 314572800, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_35: shape = [640, 3440640], stride = [3440640, 1], offset = 0, size = 2202009600, datatype = boolean, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_36: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_37: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_38: operator = ReshapeForward, inputs = [Tensor_30], outputs = [Tensor_39], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 3 shape: 640 shape: 256 stride: 256 stride: 768 stride: 1]
+Tensor_39: shape = [3, 640, 256], stride = [256, 768, 1], offset = 0, size = 491520, datatype = float32, contiguous? = false, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_42: operator = ReshapeForward, inputs = [Tensor_39], outputs = [Tensor_43], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 256 stride: 768 stride: 1 offset: 512]
+Tensor_43: shape = [640, 256], stride = [768, 1], offset = 512, size = 491520, datatype = float32, contiguous? = false, complete? = false, dense? = false, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_44: operator = LinearForward, inputs = [Tensor_43, Tensor_13, Tensor_14], outputs = [Tensor_45], # backwardable inputs = 3, state = executable, attr<ExplicitSync> = ()
+  - Operand: []
+Tensor_45: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_46: operator = ReluForward, inputs = [Tensor_45], outputs = [Tensor_47, Tensor_48], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: []
+Tensor_47: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Tensor_48: shape = [640, 32], stride = [32, 1], offset = 0, size = 20480, datatype = uint8, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_49: operator = NormForward, inputs = [Tensor_47], outputs = [Tensor_50], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [mode: NUMBER_NORM dims: 1 keepdim: true p: 2]
+Tensor_50: shape = [640, 1], stride = [1, 1], offset = 0, size = 640, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_51: operator = ElemwiseUnaryForward, inputs = [Tensor_50], outputs = [Tensor_52], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_UNARY_ADD scal1_float: 1e-05]
+Tensor_52: shape = [640, 1], stride = [1, 1], offset = 0, size = 640, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_53: operator = ReshapeForward, inputs = [Tensor_52], outputs = [Tensor_54], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 256 stride: 1 stride: 0]
+Tensor_54: shape = [640, 256], stride = [1, 0], offset = 0, size = 640, datatype = float32, contiguous? = false, complete? = false, dense? = false, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_55: operator = ElemwiseBinaryForward, inputs = [Tensor_47, Tensor_54], outputs = [Tensor_56], # backwardable inputs = 2, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_BINARY_DIV]
+Tensor_56: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v2, t1, o1], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+Operation_57: operator = ReshapeForward, inputs = [Tensor_56], outputs = [Tensor_58], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 64 shape: 10 shape: 256 stride: 2560 stride: 256 stride: 1]
+Tensor_58: shape = [64, 10, 256], stride = [2560, 256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o1], attr<AutogradTensor> = (!leaf requires_grad !retains_grad), attr<Distribution> = (?), attr<Storage> = (0: 0 Bnn)
+
+Target (result) graph:
+Tensor_296: shape = [1024, 40], stride = [40, 1], offset = 0, size = 40960, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (296: 163840 Ban)
+Tensor_297: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (297: 1048576 Ban)
+Tensor_298: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (298: 4096 Ban)
+Tensor_299: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (299: 4096 Ban)
+Tensor_300: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (300: 1048576 Ban)
+Tensor_301: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (301: 1048576 Ban)
+Tensor_302: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (302: 4096 Ban)
+Tensor_303: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (303: 4096 Ban)
+Tensor_304: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (304: 1048576 Ban)
+Tensor_305: shape = [1024, 256], stride = [256, 1], offset = 0, size = 262144, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (305: 1048576 Ban)
+Tensor_306: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (306: 4096 Ban)
+Tensor_307: shape = [1024], stride = [1], offset = 0, size = 1024, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (307: 4096 Ban)
+Tensor_308: shape = [256, 256], stride = [256, 1], offset = 0, size = 65536, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (308: 262144 Ban)
+Tensor_309: shape = [256], stride = [1], offset = 0, size = 256, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (309: 1024 Ban)
+Tensor_310: shape = [640, 160, 40], stride = [6400, 40, 1], offset = 0, size = 4096000, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (310: 8192000 Ban)
+Tensor_311: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (313: 983040 Ban)
+Operation_17: operator = ElemwiseUnaryForward, inputs = [Tensor_311], outputs = [Tensor_313], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_UNARY_FILL scal1_float: 0]
+Tensor_313: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (313: 983040 Bnn)
+Operation_25: operator = GenerateRandomState, inputs = [], outputs = [Tensor_315, Tensor_316], # backwardable inputs = 0, state = executable, attr<ExplicitSync> = ()
+  - Operand: [seed: 1877048108]
+Tensor_315: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (324: 2949120 Ban)
+Tensor_316: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (325: 2949120 Ban)
+Operation_28: operator = RNNForward, inputs = [Tensor_310, Tensor_313, Tensor_313, nullptr, Tensor_296, Tensor_300, Tensor_304, Tensor_297, Tensor_301, Tensor_305, Tensor_298, Tensor_302, Tensor_306, Tensor_299, Tensor_303, Tensor_307, Tensor_315, Tensor_316], outputs = [Tensor_318, Tensor_319, Tensor_320, Tensor_321, Tensor_322, Tensor_323, nullptr, nullptr, Tensor_324, Tensor_325], # backwardable inputs = 18, state = executable, attr<ExplicitSync> = ()
+  - Operand: [has_biases: true num_layers: 3 train: true mode: MODE_LSTM nonlinearity: TANH]
+Tensor_318: shape = [640, 160, 256], stride = [40960, 256, 1], offset = 0, size = 26214400, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (318: 52428800 Ban)
+Tensor_319: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (327: 983040 Ban)
+Tensor_320: shape = [640, 3, 256], stride = [768, 256, 1], offset = 0, size = 491520, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (320: 983040 Ban)
+Tensor_321: shape = [640, 160, 2, 256], stride = [81920, 512, 256, 1], offset = 0, size = 52428800, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (321: 104857600 Ban)
+Tensor_322: shape = [640, 160, 3, 256], stride = [122880, 768, 256, 1], offset = 0, size = 78643200, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (322: 157286400 Ban)
+Tensor_323: shape = [640, 160, 3, 1024], stride = [491520, 3072, 1024, 1], offset = 0, size = 314572800, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (323: 629145600 Ban)
+Tensor_324: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (324: 2949120 Bnn)
+Tensor_325: shape = [737280], stride = [1], offset = 0, size = 737280, datatype = uint32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (dup), attr<Storage> = (325: 2949120 Bnn)
+Operation_42: operator = ReshapeForward, inputs = [Tensor_319], outputs = [Tensor_327], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 256 stride: 768 stride: 1 offset: 512]
+Tensor_327: shape = [640, 256], stride = [768, 1], offset = 512, size = 491520, datatype = float32, contiguous? = false, complete? = false, dense? = false, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (327: 983040 Bnn)
+Operation_44: operator = LinearForward, inputs = [Tensor_327, Tensor_308, Tensor_309], outputs = [Tensor_329], # backwardable inputs = 3, state = executable, attr<ExplicitSync> = ()
+  - Operand: []
+Tensor_329: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (329: 327680 Ban)
+Operation_46: operator = ReluForward, inputs = [Tensor_329], outputs = [Tensor_331, Tensor_332], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: []
+Tensor_331: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (331: 327680 Ban)
+Tensor_332: shape = [640, 32], stride = [32, 1], offset = 0, size = 20480, datatype = uint8, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (332: 10240 Ban)
+Operation_49: operator = NormForward, inputs = [Tensor_331], outputs = [Tensor_334], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [mode: NUMBER_NORM dims: 1 keepdim: true p: 2]
+Tensor_334: shape = [640, 1], stride = [1, 1], offset = 0, size = 640, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (334: 1280 Ban)
+Operation_51: operator = ElemwiseUnaryForward, inputs = [Tensor_334], outputs = [Tensor_336], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_UNARY_ADD scal1_float: 1e-05]
+Tensor_336: shape = [640, 1], stride = [1, 1], offset = 0, size = 640, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v0, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (338: 1280 Ban)
+Operation_53: operator = ReshapeForward, inputs = [Tensor_336], outputs = [Tensor_338], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 640 shape: 256 stride: 1 stride: 0]
+Tensor_338: shape = [640, 256], stride = [1, 0], offset = 0, size = 640, datatype = float32, contiguous? = false, complete? = false, dense? = false, ref_cnt = [v1, t0, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (338: 1280 Bnn)
+Operation_55: operator = ElemwiseBinaryForward, inputs = [Tensor_331, Tensor_338], outputs = [Tensor_340], # backwardable inputs = 2, state = executable, attr<ExplicitSync> = ()
+  - Operand: [subop: ELEMWISE_BINARY_DIV]
+Tensor_340: shape = [640, 256], stride = [256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (342: 327680 Ban)
+Operation_57: operator = ReshapeForward, inputs = [Tensor_340], outputs = [Tensor_342], # backwardable inputs = 1, state = executable, attr<ExplicitSync> = ()
+  - Operand: [shape: 64 shape: 10 shape: 256 stride: 2560 stride: 256 stride: 1]
+Tensor_342: shape = [64, 10, 256], stride = [2560, 256, 1], offset = 0, size = 163840, datatype = float32, contiguous? = true, complete? = true, dense? = true, ref_cnt = [v1, t1, o0], attr<AutogradTensor> = (leaf !requires_grad !retains_grad), attr<Distribution> = (div:64), attr<Storage> = (342: 327680 Bnn)
+
+Move-in tensors (source -> target):
+Tensor_1 -> Tensor_296
+Tensor_2 -> Tensor_297
+Tensor_3 -> Tensor_298
+Tensor_4 -> Tensor_299
+Tensor_5 -> Tensor_300
+Tensor_6 -> Tensor_301
+Tensor_7 -> Tensor_302
+Tensor_8 -> Tensor_303
+Tensor_9 -> Tensor_304
+Tensor_10 -> Tensor_305
+Tensor_11 -> Tensor_306
+Tensor_12 -> Tensor_307
+Tensor_13 -> Tensor_308
+Tensor_14 -> Tensor_309
+Tensor_15 -> Tensor_310
+Tensor_16 -> Tensor_311
+
+Move-out tensors (source <- target):
+Tensor_1 <- Tensor_296
+Tensor_2 <- Tensor_297
+Tensor_3 <- Tensor_298
+Tensor_4 <- Tensor_299
+Tensor_5 <- Tensor_300
+Tensor_6 <- Tensor_301
+Tensor_7 <- Tensor_302
+Tensor_8 <- Tensor_303
+Tensor_9 <- Tensor_304
+Tensor_10 <- Tensor_305
+Tensor_11 <- Tensor_306
+Tensor_12 <- Tensor_307
+Tensor_13 <- Tensor_308
+Tensor_14 <- Tensor_309
+Tensor_15 <- Tensor_310
+Tensor_22 <- Tensor_313
+Tensor_24 <- Tensor_313
+Tensor_29 <- Tensor_318
+Tensor_30 <- Tensor_319
+Tensor_31 <- Tensor_320
+Tensor_32 <- Tensor_321
+Tensor_33 <- Tensor_322
+Tensor_34 <- Tensor_323
+Tensor_36 <- Tensor_324
+Tensor_37 <- Tensor_325
+Tensor_43 <- Tensor_327
+Tensor_45 <- Tensor_329
+Tensor_47 <- Tensor_331
+Tensor_48 <- Tensor_332
+Tensor_50 <- Tensor_334
+Tensor_54 <- Tensor_338
+Tensor_56 <- Tensor_340
+Tensor_58 <- Tensor_342
+
